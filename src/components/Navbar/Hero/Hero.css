@@ -1,0 +1,167 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #000; /* black background */
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 100vh; /* full screen height */
+  justify-content: center; /* content center */
+}
+
+/* Profile Image */
+.hero img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 0 30px #ff0000, 0 0 60px #000;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.hero h1 span {
+  background: linear-gradient(270deg, #e3b009, #07ebd5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.hero p {
+  width: 65%;
+  max-width: 800px;
+  font-size: 20px;
+  color: #b3aeae;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Buttons wrapper */
+.hero-action {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Common Button Styles */
+.hero-connect,
+.hero-resume {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid #07ebd5;
+  color: #07ebd5;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-decoration: none; /* underline hata diya */
+  display: inline-block;
+}
+
+/* Connect Button Hover */
+.hero-connect:hover {
+  background-color: #05c3b8;
+  color: #000;
+}
+
+/* Resume Button Hover */
+.hero-resume:hover {
+  background-color: #07ebd5;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    width: 95%;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-action {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 10px;
+    min-height: 75vh;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .hero img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .hero-action {
+    max-width: 280px;
+  }
+
+  .hero-connect,
+  .hero-resume {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero img {
+    width: 140px;
+    height: 140px;
+  }
+}

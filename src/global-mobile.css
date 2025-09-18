@@ -1,0 +1,164 @@
+/* Global Mobile Optimizations */
+
+/* Prevent horizontal scroll on mobile */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Improve touch targets for mobile */
+button, 
+a, 
+input, 
+textarea, 
+select,
+.nav-menu li,
+.slide,
+.carousel__item {
+  min-height: 44px;
+  min-width: 44px;
+  cursor: pointer;
+}
+
+/* Enhanced touch interactions */
+.slide,
+.carousel__item,
+.hero-connect,
+.hero-resume,
+.btn-primary {
+  -webkit-tap-highlight-color: rgba(0, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.slide:active,
+.carousel__item:active {
+  transform: scale(0.95);
+}
+
+/* Better touch feedback */
+.nav-menu li:active {
+  color: #ff6600;
+  transform: scale(0.95);
+}
+
+/* Smooth scrolling for mobile */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    font-size: 16px;
+  }
+}
+
+/* Improve performance on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Better font rendering on mobile */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-first container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Mobile breakpoints for reference */
+/* 
+  Mobile: 320px - 480px
+  Tablet: 481px - 768px
+  Desktop: 769px+
+*/
+
+/* Additional mobile optimizations */
+@media (max-width: 768px) {
+  /* Reduce section spacing */
+  .hero, .about, .skills, .projects, .contact {
+    margin-bottom: 0;
+  }
+
+  /* Reduce gaps between sections */
+  .hero + .about,
+  .about + .skills,
+  .skills + .projects,
+  .projects + .contact {
+    margin-top: -20px;
+  }
+
+  /* Specifically reduce skills to projects gap */
+  .skills + .projects {
+    margin-top: -50px;
+  }
+
+  /* Better text readability */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* Improve button interactions */
+  .hero-connect, .hero-resume, .btn-primary {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Better form interactions */
+  input, textarea {
+    touch-action: manipulation;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Ensure minimum touch targets */
+  .slide {
+    min-width: 60px;
+    min-height: 50px;
+  }
+
+  /* Further reduce skills to projects gap on very small screens */
+  .skills + .projects {
+    margin-top: -60px;
+  }
+}
